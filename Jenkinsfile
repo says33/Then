@@ -13,7 +13,7 @@ pipeline {
                       scannerHome = tool 'sonnarqube'
                       echo "${scannerHome}"
                 }
-                withSonarQubeEnv('sonar') {
+                withSonarQubeEnv('sonarQubeServer') {
                    sh "sonar-scanner"
                 }
              }
