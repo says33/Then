@@ -14,7 +14,7 @@ pipeline {
                       echo "${scannerHome}"
                 }
                 withSonarQubeEnv('sonarQubeServer') {
-                   sh "sonar-scanner"
+                   sh "${scannerHome}/bin/sonar-scanner"
                 }
              }
           }
